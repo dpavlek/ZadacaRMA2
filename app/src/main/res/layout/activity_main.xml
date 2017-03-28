@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="hr.ferit.danielpavlekovic.zadaca2rma.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:baselineAligned="false"
+                android:layout_gravity="center_vertical"
+                xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight=".5"
+                    android:weightSum="100"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/ibtnConvertSpeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/speedometer"
+                        android:scaleType="fitXY"
+                        android:layout_weight="50"
+                        android:contentDescription="@string/ibtnSpeedDesc"/>
+
+                    <ImageButton
+                        android:id="@+id/ibtnConvertCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="50"
+                        android:src="@drawable/currency"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/ibtnCurrencyDesc"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight=".5"
+                    android:weightSum="100"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/ibtnConvertTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="50"
+                        android:contentDescription="@string/ibtnTimeDesc"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/time" />
+
+                    <ImageButton
+                        android:id="@+id/ibtnConvertDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="50"
+                        android:contentDescription="@string/ibtnDistanceDesc"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/distance" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+

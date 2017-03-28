@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Zadaca2RMA</string>
+    <string name="app_name">Unit Converter</string>
+    <string name="ibtnSpeedDesc">Speedometer</string>
+    <string name="ibtnTimeDesc">Wall Clock</string>
+    <string name="ibtnCurrencyDesc">Euro bills and credit card</string>
+    <string name="ibtnDistanceDesc">Meter</string>
 </resources>

@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SpeedActivity" />
+        <activity android:name=".TimeActivity" />
+        <activity android:name=".DistanceActivity" />
+        <activity android:name=".CurrencyActivity" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>
