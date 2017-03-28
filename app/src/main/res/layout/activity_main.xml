@@ -7,7 +7,8 @@
                 android:weightSum="1"
                 android:baselineAligned="false"
                 android:layout_gravity="center_vertical"
-                xmlns:android="http://schemas.android.com/apk/res/android">
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:backgroundTint="@color/colorImgBtnBorder">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -15,6 +16,7 @@
                     android:orientation="vertical"
                     android:layout_weight=".5"
                     android:weightSum="100"
+                    android:backgroundTint="@color/colorImgBtnBorder"
                     >
 
                     <ImageButton
@@ -24,6 +26,7 @@
                         android:src="@drawable/speedometer"
                         android:scaleType="fitXY"
                         android:layout_weight="50"
+                        android:backgroundTint="@color/colorImgBtnBorder"
                         android:contentDescription="@string/ibtnSpeedDesc"/>
 
                     <ImageButton
@@ -33,6 +36,7 @@
                         android:layout_weight="50"
                         android:src="@drawable/currency"
                         android:scaleType="fitXY"
+                        android:backgroundTint="@color/colorImgBtnBorder"
                         android:contentDescription="@string/ibtnCurrencyDesc"/>
 
                 </LinearLayout>
@@ -43,6 +47,7 @@
                     android:orientation="vertical"
                     android:layout_weight=".5"
                     android:weightSum="100"
+                    android:backgroundTint="@color/colorImgBtnBorder"
                     >
 
                     <ImageButton
@@ -52,6 +57,7 @@
                         android:layout_weight="50"
                         android:contentDescription="@string/ibtnTimeDesc"
                         android:scaleType="fitXY"
+                        android:backgroundTint="@color/colorImgBtnBorder"
                         android:src="@drawable/time" />
 
                     <ImageButton
@@ -61,6 +67,7 @@
                         android:layout_weight="50"
                         android:contentDescription="@string/ibtnDistanceDesc"
                         android:scaleType="fitXY"
+                        android:backgroundTint="@color/colorImgBtnBorder"
                         android:src="@drawable/distance" />
 
                 </LinearLayout>

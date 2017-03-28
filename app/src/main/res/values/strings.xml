@@ -4,4 +4,58 @@
     <string name="ibtnTimeDesc">Wall Clock</string>
     <string name="ibtnCurrencyDesc">Euro bills and credit card</string>
     <string name="ibtnDistanceDesc">Meter</string>
+    <string name="SpeedConverterTitle">Speed converter</string>
+    <string name="ConverterInputDesc">Choose unit to convert from</string>
+    <string-array name="SpeedUnits">
+        
+        <item>km/h</item>
+        <item>mph</item>
+        <item>meters per second</item>
+        <item>miles per second</item>
+        <item>knots</item>
+        <item>yard per second</item>
+        <item>speed of light</item>
+        
+    </string-array>
+    
+    <string-array name="DistanceUnits">
+        
+        <item>km</item>
+        <item>mi</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>dm</item>
+        <item>ft</item>
+        <item>yd</item>
+        <item>in</item>
+        <item>light years</item>
+        
+    </string-array>
+    
+    <string-array name="TimeUnits">
+        <item>years</item>
+        <item>days</item>
+        <item>weeks</item>
+        <item>hours</item>
+        <item>minutes</item>
+        <item>seconds</item>
+        <item>miliseconds</item>
+        <item>microseconds</item>
+        <item>nanoseconds</item>
+        <item>picoseconds</item>
+
+    </string-array>
+
+    <string-array name="CurrencyUnits">
+
+        <item>Euro</item>
+        <item>American Dollar</item>
+        <item>Swiss franc</item>
+        <item>Australian Dollar</item>
+        <item>Canadian Dollar</item>
+        <item>Croatian Kuna</item>
+        <item>Serbian Dinar</item>
+        <item>Bosnian Mark</item>
+
+    </string-array>
 </resources>
