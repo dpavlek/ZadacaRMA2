@@ -12,6 +12,7 @@ public class SpeedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Speed speed = new Speed(this);
         setContentView(R.layout.activity_speed);
         initializeUI();
     }
@@ -22,5 +23,9 @@ public class SpeedActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speedInput.setAdapter(adapter);
         speedInput.setSelection(0);
+        speedOutput = (Spinner) findViewById(R.id.spnSpeedOutput);
+        speedOutput.setAdapter(adapter);
+        speedOutput.setSelection(0);
+
     }
 }

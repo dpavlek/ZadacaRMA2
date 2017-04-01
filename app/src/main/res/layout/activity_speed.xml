@@ -23,25 +23,38 @@
 
         <TextView
             android:id="@+id/tvSpeedInputDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/tvDescStyle"
             android:layout_below="@id/tvSpeedTitle"
-            android:text="@string/ConverterInputDesc"
-            android:padding="10dp"
-            android:textSize="20sp"/>
+            android:text="@string/ConverterInputDesc" />
 
-        <Spinner
-            android:id="@+id/spnSpeedInput"
+        <LinearLayout
+            android:id="@+id/llSpeedInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvSpeedInputDesc"
-            android:padding="10dp"/>
+            android:orientation="horizontal"
+            android:layout_below="@id/tvSpeedInputDesc">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="viewEnd"/>
+
+            <Spinner
+                android:id="@+id/spnSpeedInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvSpeedOutputDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/spnSpeedInput"
+            android:layout_below="@id/llSpeedInput"
             android:text="@string/ConverterOutputDesc"
             android:padding="10dp"
             android:textSize="20sp"/>
