@@ -5,6 +5,9 @@
     <string name="ibtnCurrencyDesc">Euro bills and credit card</string>
     <string name="ibtnDistanceDesc">Meter</string>
     <string name="SpeedConverterTitle">Speed converter</string>
+    <string name="CurrencyConverterTitle">Currency converter</string>
+    <string name="DistanceConverterTitle">Distance converter</string>
+    <string name="TimeConverterTitle">Time Converter</string>
     <string name="ConverterInputDesc">Choose unit to convert from</string>
     <string-array name="SpeedUnits">
         
