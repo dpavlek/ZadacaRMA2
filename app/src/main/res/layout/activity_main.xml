@@ -27,8 +27,8 @@
                         android:contentDescription="@string/ibtnSpeedDesc"
                         android:padding="5dp"/>
 
-                    <Button
-                        android:id="@+id/btnSpeed"
+                    <TextView
+                        android:id="@+id/tvSpeedTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="2dp"

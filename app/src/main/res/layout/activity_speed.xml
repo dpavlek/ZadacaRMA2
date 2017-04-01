@@ -17,8 +17,7 @@
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@color/colorTitle"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:padding="10dp"
             android:textAlignment="center"
             />
 
@@ -28,10 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvSpeedTitle"
             android:text="@string/ConverterInputDesc"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
+            android:padding="10dp"
             android:textSize="20sp"/>
 
         <Spinner
@@ -39,8 +35,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvSpeedInputDesc"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvSpeedOutputDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spnSpeedInput"
+            android:text="@string/ConverterOutputDesc"
+            android:padding="10dp"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spnSpeedOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSpeedOutputDesc"
+            android:padding="10dp"/>
 
     </RelativeLayout>
 

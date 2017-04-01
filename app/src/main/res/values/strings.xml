@@ -9,6 +9,7 @@
     <string name="DistanceConverterTitle">Distance converter</string>
     <string name="TimeConverterTitle">Time Converter</string>
     <string name="ConverterInputDesc">Choose unit to convert from</string>
+    <string name="ConverterOutputDesc">Choose unit to convert to</string>
     <string-array name="SpeedUnits">
         
         <item>km/h</item>
