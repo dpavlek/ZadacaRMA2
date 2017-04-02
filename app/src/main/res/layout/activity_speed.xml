@@ -35,7 +35,7 @@
             android:layout_below="@id/tvSpeedInputDesc">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etInputedSpeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -65,6 +65,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvSpeedOutputDesc"
             android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnConvertSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spnSpeedOutput"
+            android:text="CONVERT"
+            />
 
     </RelativeLayout>
 
