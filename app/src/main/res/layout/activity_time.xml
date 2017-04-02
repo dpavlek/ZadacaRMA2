@@ -1,9 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="hr.ferit.danielpavlekovic.zadaca2rma.TimeActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvtimeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/TimeConverterTitle"
+            android:layout_alignParentTop="true"
+            android:textAllCaps="true"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTitle"
+            android:padding="10dp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tvtimeInputDesc"
+            style="@style/tvDescStyle"
+            android:layout_below="@id/tvtimeTitle"
+            android:text="@string/ConverterInputDesc" />
+
+        <LinearLayout
+            android:id="@+id/lltimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvtimeInputDesc">
+
+            <EditText
+                android:id="@+id/etInputedtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="viewEnd"/>
+
+            <Spinner
+                android:id="@+id/spntimeInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvtimeOutputDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltimeInput"
+            android:text="@string/ConverterOutputDesc"
+            android:padding="10dp"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spntimeOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvtimeOutputDesc"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnConverttime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spntimeOutput"
+            android:text="CONVERT"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

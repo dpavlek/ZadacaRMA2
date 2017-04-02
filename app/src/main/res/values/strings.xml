@@ -10,15 +10,16 @@
     <string name="TimeConverterTitle">Time Converter</string>
     <string name="ConverterInputDesc">Convert from</string>
     <string name="ConverterOutputDesc">To</string>
+    <string name="ResultTitle">Result</string>
     <string-array name="SpeedUnits">
         
         <item>km/h</item>
         <item>mph</item>
-        <item>meters per second</item>
-        <item>miles per second</item>
+        <item>m/s</item>
+        <item>mi/s</item>
         <item>knots</item>
-        <item>yard per second</item>
-        <item>speed of light</item>
+        <item>yd/s</item>
+        <item>c</item>
         
     </string-array>
     
