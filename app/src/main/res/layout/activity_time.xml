@@ -40,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:textAlignment="viewEnd"/>
+                android:textAlignment="viewEnd"
+                android:hint="@string/inputHint"/>
 
             <Spinner
                 android:id="@+id/spntimeInput"

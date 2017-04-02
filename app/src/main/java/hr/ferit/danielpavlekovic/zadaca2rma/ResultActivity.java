@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class ResultActivity extends AppCompatActivity {
 
     private TextView tvConvertFrom,tvConvertTo,tvInputValue,tvOutputValue;
@@ -19,6 +22,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void initUI() {
+        NumberFormat formatter = new DecimalFormat("0.#####E0");
         this.tvConvertFrom = (TextView) findViewById(R.id.tvConvertFrom);
         this.tvConvertTo = (TextView) findViewById(R.id.tvConvertTo);
         this.tvInputValue = (TextView) findViewById(R.id.tvValueFrom);
@@ -31,6 +35,12 @@ public class ResultActivity extends AppCompatActivity {
         tvConvertTo.setText(ConvertTo);
         tvConvertFrom.setText(ConvertFrom);
         tvInputValue.setText(String.format("%.2f",InputValue));
-        tvOutputValue.setText(String.format("%.2f",OutputValue));
+        if (OutputValue > 100000 || OutputValue<0.001) {
+            tvOutputValue.setText(formatter.format(OutputValue));
+        }
+        else{
+            tvOutputValue.setText(String.format("%.2f",OutputValue));
+        }
+
     }
 }

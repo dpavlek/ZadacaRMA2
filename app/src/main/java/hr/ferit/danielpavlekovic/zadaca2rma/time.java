@@ -39,181 +39,294 @@ class time {
     public Double Convert(){
         Double convertedtime=0.0;
         try {
-            if (outputtimeType.equals(timeTypes[0])) { //km/h
+            if (outputtimeType.equals(timeTypes[0])) { //years
                 if (inputtimeType.equals(timeTypes[0])) {
-                    convertedtime = inputtime; //km/h to km/h
+                    convertedtime = inputtime; //to years
                 } else if (inputtimeType.equals(timeTypes[1])) {
-                    convertedtime = inputtime * 1.61; //mph to kmph
+                    convertedtime = inputtime / 365.242199; //to days
                 } else if (inputtimeType .equals(timeTypes[2]) ) {
-                    convertedtime = inputtime * 3.6; // m/s to km/h
+                    convertedtime = inputtime / 52.177457; //to weeks
                 } else if (inputtimeType .equals(timeTypes[3])) {
-                    convertedtime = inputtime * 5793.6384; // miles per second to km/h
+                    convertedtime = inputtime / 8765.81277; //to hours
                 } else if (inputtimeType .equals(timeTypes[4])) {
-                    //knots to km/h
-                    convertedtime = inputtime * 1.852;
+                    //to minutes
+                    convertedtime = inputtime / 525948.766;
                 } else if (inputtimeType .equals(timeTypes[5]) ) {
-                    //yard per second to km/h
-                    convertedtime = inputtime * 3.29184;
+                    //to seconds
+                    convertedtime = inputtime / 31556926;
                 } else if (inputtimeType .equals(timeTypes[6]) ) {
-                    //time of light to km/h
-                    convertedtime = inputtime * (1.07925285 * pow(10, 9));
+                    //to miliseconds
+                    convertedtime = inputtime / (3.1556926 * pow(10, 10));
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/(3.1556926 * pow(10, 13));
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/(3.1556926 * pow(10, 16));
+                } else if(inputtimeType.equals(timeTypes[9])){
+                    //to picoseconds
+                    convertedtime=inputtime/(3.1556926 * pow(10, 19));
                 }
             }
-            else if(outputtimeType.equals(timeTypes[1])){
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime/1.61; //km/h to mph
-                }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime; //mph to mph
-                }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime*2.23693629; // m/s to mph
-                }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime*3600; // miles per second to mph
-                }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to mph
-                    convertedtime=inputtime*1.15077945;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to mph
-                    convertedtime=inputtime*2.04545455;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to mph
-                    convertedtime=inputtime*670616629;
-                }
-            }
-            else if(outputtimeType.equals(timeTypes[2])){
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime*0.277777778; //km/h to m/s
-                }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime*0.44704; //mph to m/s
-                }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime; // m/s to m/s
-                }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime*1609.344; // miles per second to m/s
-                }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to m/s
-                    convertedtime=inputtime*0.514444444;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to m/s
-                    convertedtime=inputtime*0.9144;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to m/s
-                    convertedtime=inputtime*299792458;
+            else if (outputtimeType.equals(timeTypes[1])) { //days
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime*365.242199; //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime; //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / 0.142857143; //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime / 24; //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime / (24*60);
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime /(24*60*60);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime / (8.64 * pow(10, 7));
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/(8.64 * pow(10, 10));
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/(8.64 * pow(10, 13));
+                } else if(inputtimeType.equals(timeTypes[9])){
+                    //to picoseconds
+                    convertedtime=inputtime/(8.64 * pow(10, 16));
                 }
             }
-            else if(outputtimeType.equals(timeTypes[3]))
-            {
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime*0.000172603109; //km/h to mi/s
-                }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime*0.000277777778; //mph to mi/s
-                }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime*0.000621371192; // m/s to mi/s
-                }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime; // miles per second to mi/s
-                }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to mi/s
-                    convertedtime=inputtime*0.000319660958;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to mi/s
-                    convertedtime=inputtime*0.000568181818;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to mi/s
-                    convertedtime=inputtime*186282.397;
+            else if (outputtimeType.equals(timeTypes[2])) { //weeks
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/0.0191653649; //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/7; //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime; //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime / (7*24); //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime / (7*24*60);
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime / (7*24*60*60);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime / (7*(8.64 * pow(10, 7)));
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/(7*(8.64 * pow(10, 10)));
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/(7*(8.64 * pow(10, 13)));
+                } else if(inputtimeType.equals(timeTypes[9])){
+                    //to picoseconds
+                    convertedtime=inputtime/(7*(8.64 * pow(10, 16)));
                 }
             }
-            else if(outputtimeType.equals(timeTypes[4])){
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime*0.539956803; //km/h to knots
+            else if (outputtimeType.equals(timeTypes[3])) { //hours
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/0.000114079553; //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/0.0416666667; //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / 0.00595238095; //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime; //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime / 60;
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime / (60*60);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime / 3600000;
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/(3.6*pow(10,9));
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/(3.6 * pow(10, 11));
+                } else if(inputtimeType.equals(timeTypes[9])){
+                    //to picoseconds
+                    convertedtime=inputtime/(3.6 * pow(10, 14));
                 }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime*0.868976242; //mph to knots
+            }
+            else if (outputtimeType.equals(timeTypes[4])) { //minutes
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(1.90132588*pow(10,-6)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/0.000694444444; //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (9.92063492*pow(10,-5)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime*60; //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime;
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime /60;
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime / 60000;
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/(6*pow(10,7));
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/(6 * pow(10, 10));
+                } else if(inputtimeType.equals(timeTypes[9])){
+                    //to picoseconds
+                    convertedtime=inputtime/(6 * pow(10, 13));
                 }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime*1.94384449; // m/s to knots
+            }
+            else if (outputtimeType.equals(timeTypes[4])) { //seconds
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(3.16887646*pow(10,-8)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/(1.15740741*pow(10,-5)); //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (1.65343915*pow(10,-6)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime/0.000277777778; //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime*60;
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime;
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime / 1000;
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/1000000;
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/1000000000;
+                } else if(inputtimeType.equals(timeTypes[9])) {
+                    //to picoseconds
+                    convertedtime = inputtime / pow(10, 12);
                 }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime*3128.31447; // miles per second to knots
+            }
+            else if (outputtimeType.equals(timeTypes[5])) { //miliseconds
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(3.16887646*pow(10,-11)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/(1.15740741*pow(10,-8)); //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (1.65343915*pow(10,-9)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime/(2.77777778*pow(10,-7)); //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime/(1.6666667*pow(10,-5));
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime/0.001;
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime;
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/1000;
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/1000000;
+                } else if(inputtimeType.equals(timeTypes[9])) {
+                    //to picoseconds
+                    convertedtime = inputtime / pow(10, 6);
                 }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to knots
+            }
+            else if (outputtimeType.equals(timeTypes[6])) { //microseconds
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(3.16887646*pow(10,-14)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/(1.15740741*pow(10,-11)); //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (1.65343915*pow(10,-12)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime/(2.77777778*pow(10,-10)); //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime/(1.6666667*pow(10,-8));
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime/pow(10,-6);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime/0.001;
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
                     convertedtime=inputtime;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to knots
-                    convertedtime=inputtime*1.7774514;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to knots
-                    convertedtime=inputtime*582749918;
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/1000;
+                } else if(inputtimeType.equals(timeTypes[9])) {
+                    //to picoseconds
+                    convertedtime = inputtime / 1000000;
                 }
             }
-            else if(outputtimeType.equals(timeTypes[5])){
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime*0.303781472; //km/h to yps
-                }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime*0.488888889; //mph to yps
-                }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime*1.0936133; // m/s to yps
-                }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime*1760; // miles per second to yps
-                }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to yps
-                    convertedtime=inputtime*0.562603286;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to yps
+            else if (outputtimeType.equals(timeTypes[7])) { //nanoseconds
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(3.16887646*pow(10,-17)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/(1.15740741*pow(10,-14)); //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (1.65343915*pow(10,-15)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime/(2.77777778*pow(10,-13)); //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime/(1.6666667*pow(10,-11));
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime/pow(10,-9);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime/pow(10,-6);
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/0.001;
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
                     convertedtime=inputtime;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to yps
-                    convertedtime=inputtime*327857019;
+                } else if(inputtimeType.equals(timeTypes[9])) {
+                    //to picoseconds
+                    convertedtime = inputtime / 1000;
                 }
             }
-            else if(outputtimeType.equals(timeTypes[6])){
-                if(inputtimeType.equals(timeTypes[0])){
-                    convertedtime=inputtime/(1.07925285*pow(10,9)); //km/h to c
-                }
-                else if(inputtimeType.equals(timeTypes[1])){
-                    convertedtime=inputtime/670616629; //mph to c
-                }
-                else if(inputtimeType.equals(timeTypes[2])){
-                    convertedtime=inputtime/299792458; // m/s to c
-                }
-                else if(inputtimeType.equals(timeTypes[3])){
-                    convertedtime=inputtime/186282.397; // miles per second to c
-                }
-                else if(inputtimeType.equals(timeTypes[4])){
-                    //knots to c
-                    convertedtime=inputtime/582749918;
-                }
-                else if(inputtimeType.equals(timeTypes[5])){
-                    //yard per second to c
-                    convertedtime=inputtime/327857019;
-                }
-                else if(inputtimeType.equals(timeTypes[6])){
-                    //time of light to c
-                    convertedtime=inputtime;
+            else if (outputtimeType.equals(timeTypes[8])) { //picoseconds
+                if (inputtimeType.equals(timeTypes[0])) {
+                    convertedtime = inputtime/(3.16887646*pow(10,-20)); //to years
+                } else if (inputtimeType.equals(timeTypes[1])) {
+                    convertedtime = inputtime/(1.15740741*pow(10,-17)); //to days
+                } else if (inputtimeType .equals(timeTypes[2]) ) {
+                    convertedtime = inputtime / (1.65343915*pow(10,-18)); //to weeks
+                } else if (inputtimeType .equals(timeTypes[3])) {
+                    convertedtime = inputtime/(2.77777778*pow(10,-16)); //to hours
+                } else if (inputtimeType .equals(timeTypes[4])) {
+                    //to minutes
+                    convertedtime = inputtime/(1.6666667*pow(10,-14));
+                } else if (inputtimeType .equals(timeTypes[5]) ) {
+                    //to seconds
+                    convertedtime = inputtime/pow(10,-12);
+                } else if (inputtimeType .equals(timeTypes[6]) ) {
+                    //to miliseconds
+                    convertedtime = inputtime/pow(10,-9);
+                } else if(inputtimeType.equals(timeTypes[7])){
+                    //to microseconds
+                    convertedtime=inputtime/pow(10,-6);
+                } else if(inputtimeType.equals(timeTypes[8])){
+                    //to nanoseconds
+                    convertedtime=inputtime/0.001;
+                } else if(inputtimeType.equals(timeTypes[9])) {
+                    //to picoseconds
+                    convertedtime = inputtime;
                 }
             }
         }
