@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
         tvConvertTo.setText(ConvertTo);
         tvConvertFrom.setText(ConvertFrom);
         tvInputValue.setText(String.format("%.2f",InputValue));
-        if (OutputValue > 100000 || OutputValue<0.001) {
+        if (OutputValue > 1000000 || OutputValue<0.001) {
             tvOutputValue.setText(formatter.format(OutputValue));
         }
         else{
