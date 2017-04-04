@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="hr.ferit.danielpavlekovic.zadaca2rma.CurrencyActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCurrencyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CurrencyConverterTitle"
+            android:layout_alignParentTop="true"
+            android:textAllCaps="true"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTitle"
+            android:padding="10dp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tvCurrencyInputDesc"
+            style="@style/tvDescStyle"
+            android:layout_below="@id/tvCurrencyTitle"
+            android:text="@string/ConverterInputDesc" />
+
+        <LinearLayout
+            android:id="@+id/llCurrencyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvCurrencyInputDesc">
+
+            <EditText
+                android:id="@+id/etInputedCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="viewEnd"
+                android:hint="@string/inputHint"/>
+
+            <Spinner
+                android:id="@+id/spnCurrencyInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCurrencyOutputDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llCurrencyInput"
+            android:text="@string/ConverterOutputDesc"
+            android:padding="10dp"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spnCurrencyOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrencyOutputDesc"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnConvertCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spnCurrencyOutput"
+            android:text="@string/convert"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

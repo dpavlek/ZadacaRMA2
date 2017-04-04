@@ -40,11 +40,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:textAlignment="viewEnd"/>
+                android:textAlignment="viewEnd" />
 
             <Spinner
                 android:id="@+id/spnSpeedInput"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="20" />
 
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/spnSpeedOutput"
-            android:text="CONVERT"
+            android:text="@string/convert"
             />
 
     </RelativeLayout>

@@ -12,6 +12,7 @@
     <string name="ConverterOutputDesc">To</string>
     <string name="ResultTitle">Result</string>
     <string name="inputHint">Enter Value</string>
+    <string name="convert">CONVERT</string>
     <string-array name="SpeedUnits">
         
         <item>km/h</item>
