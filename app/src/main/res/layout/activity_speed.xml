@@ -52,12 +52,9 @@
 
         <TextView
             android:id="@+id/tvSpeedOutputDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/tvDescStyle"
             android:layout_below="@id/llSpeedInput"
-            android:text="@string/ConverterOutputDesc"
-            android:padding="10dp"
-            android:textSize="20sp"/>
+            android:text="@string/ConverterOutputDesc" />
 
         <Spinner
             android:id="@+id/spnSpeedOutput"

@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitle">#000000</color>
-    <color name="colorImgBtnBorder">#228B22</color>
+    <color name="colorResult">#00BFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGold">#FFD700</color>
 </resources>

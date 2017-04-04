@@ -36,12 +36,7 @@
 
             <EditText
                 android:id="@+id/etInputedtime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="viewEnd"
-                android:hint="@string/inputHint"/>
+                style="@style/etValueStyle"/>
 
             <Spinner
                 android:id="@+id/spntimeInput"
@@ -53,12 +48,9 @@
 
         <TextView
             android:id="@+id/tvtimeOutputDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@id/lltimeInput"
             android:text="@string/ConverterOutputDesc"
-            android:padding="10dp"
-            android:textSize="20sp"/>
+            style="@style/tvDescStyle"/>
 
         <Spinner
             android:id="@+id/spntimeOutput"

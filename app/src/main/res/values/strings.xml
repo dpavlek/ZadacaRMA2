@@ -13,6 +13,7 @@
     <string name="ResultTitle">Result</string>
     <string name="inputHint">Enter Value</string>
     <string name="convert">CONVERT</string>
+    <string name="tvResult">RESULTS</string>
     <string-array name="SpeedUnits">
         
         <item>km/h</item>
@@ -57,7 +58,7 @@
 
         <item>Euro</item>
         <item>American Dollar</item>
-        <item>Swiss franc</item>
+        <item>Swiss Franc</item>
         <item>Australian Dollar</item>
         <item>Canadian Dollar</item>
         <item>Croatian Kuna</item>

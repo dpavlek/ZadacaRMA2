@@ -1,60 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="wrap_content"
+
+<RelativeLayout android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="100"
-    android:baselineAligned="false">
+    style="@style/LayoutResult">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="50"
-        android:background="@drawable/border"
-        android:padding="10dp">
+    <TextView
+        android:id="@+id/tvResultTitle"
+        style="@style/tvResultTitle"/>
 
-        <TextView
-            android:id="@+id/tvConvertFrom"
-            android:layout_width="match_parent"
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:baselineAligned="false"
+        android:layout_below="@id/tvResultTitle">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            style="@style/tvDescStyle"/>
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:background="@drawable/border"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tvValueFrom"
-            android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvConvertFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tvResult"/>
+
+            <TextView
+                android:id="@+id/tvValueFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tvResult"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            style="@style/tvDescStyle"/>
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:background="@drawable/border"
+            android:padding="10dp">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvConvertTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tvResult"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="50"
-        android:background="@drawable/border"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/tvConvertTo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            style="@style/tvDescStyle"/>
-
-        <TextView
-            android:id="@+id/tvValueTo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            style="@style/tvDescStyle"/>
+            <TextView
+                android:id="@+id/tvValueTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tvResult"/>
 
 
-    </LinearLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
